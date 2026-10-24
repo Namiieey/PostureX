@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ff6b1a">
+<meta name="description" content="PostureX demo — posture habits and guided rehabilitation education.">
+<link rel="icon" type="image/png" href="https://plain-apac-prod-public.komododecks.com/202610/24/X3J16styOzYowh0lt7lr/image.png">
+<title>PostureX — Move well. Feel better.</title>
+<style>
+:root{--orange:#ff6b1a;--orange2:#ff8a45;--ink:#202124;--muted:#737780;--line:#ececef;--bg:#f7f7f8;--white:#fff;--green:#20a464;--shadow:0 14px 40px rgba(28,31,36,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}button,input{font:inherit}button{cursor:pointer}.app{max-width:480px;min-height:100dvh;margin:auto;background:#fff;position:relative;overflow:hidden;box-shadow:0 0 60px #2021240c}.screen{display:none;min-height:100dvh;padding:24px 20px 34px}.screen.active{display:block;animation:fade .25s ease}@keyframes fade{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}.brand{display:flex;align-items:center;gap:10px;font-weight:850;font-size:21px;letter-spacing:-.7px}.brand img{width:42px;height:42px;object-fit:contain;border-radius:13px}.brand span{color:var(--orange)}.muted{color:var(--muted)}.eyebrow{font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--orange);font-weight:800}.title{font-size:30px;line-height:1.12;letter-spacing:-1.1px;margin:12px 0}.subtitle{color:var(--muted);font-size:14px;line-height:1.6}.btn{width:100%;border:0;border-radius:16px;padding:16px 18px;background:var(--orange);color:#fff;font-weight:800;box-shadow:0 8px 18px #ff6b1a30;transition:.2s}.btn:active{transform:scale(.985)}.btn.secondary{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:none}.btn.small{width:auto;padding:10px 14px;border-radius:12px;font-size:13px}.field{margin:17px 0}.field label{display:block;font-size:12px;font-weight:750;margin-bottom:8px}.field input{width:100%;border:1px solid #e5e6e9;background:#fafafa;border-radius:14px;padding:15px;outline:none}.field input:focus{border-color:var(--orange);box-shadow:0 0 0 3px #ff6b1a18}.login-hero{margin:30px 0 26px;background:linear-gradient(140deg,#fff0e7,#fff8f2 55%,#fff);border-radius:28px;padding:23px;position:relative;overflow:hidden}.hero-art{height:158px;display:grid;place-items:center;position:relative}.sun{width:125px;height:125px;border-radius:50%;background:#ffdfc8;position:absolute;right:15px;top:7px}.person{font-size:86px;position:relative;z-index:1;filter:drop-shadow(0 8px 5px #b85c2630)}.spark{position:absolute;font-size:24px}.s1{top:8px;left:20px}.s2{bottom:18px;right:20px}.mini-note{font-size:11px;color:#8c6b58;line-height:1.5;margin-top:12px}.legal{font-size:11px;line-height:1.55;color:#858891;margin-top:18px}.topline{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:28px}.avatar{width:39px;height:39px;border-radius:14px;background:#fff0e7;color:var(--orange);display:grid;place-items:center;font-weight:850}.plan-card{margin:22px 0;padding:22px;border-radius:24px;background:linear-gradient(145deg,#ff6b1a,#ff8e4d);color:#fff;position:relative;overflow:hidden}.plan-card:after{content:"";position:absolute;width:170px;height:170px;border:1px solid #ffffff42;border-radius:50%;right:-40px;top:-65px;box-shadow:0 0 0 22px #ffffff0b,0 0 0 45px #ffffff0b}.price{font-size:42px;letter-spacing:-1.5px;font-weight:900;margin:10px 0}.price small{font-size:14px;font-weight:600;letter-spacing:0}.feature{display:flex;gap:10px;align-items:flex-start;margin:15px 0;font-size:13px;line-height:1.45}.check{flex:0 0 22px;width:22px;height:22px;border-radius:8px;background:#e8f8ef;color:var(--green);display:grid;place-items:center;font-size:12px;font-weight:900}.payment-methods{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0}.method{border:1px solid var(--line);border-radius:15px;padding:14px 12px;background:white;text-align:left;font-weight:800;display:flex;align-items:center;gap:9px}.method.active{border:1.5px solid var(--orange);background:#fff7f2;box-shadow:0 0 0 2px #ff6b1a12}.method-icon{width:30px;height:30px;border-radius:10px;background:#f3f4f6;display:grid;place-items:center;font-size:16px}.qr-wrap{background:#fff;border:1px solid var(--line);border-radius:22px;padding:18px;text-align:center;margin:16px 0}.qr{width:170px;height:170px;margin:12px auto;display:block;border:9px solid white;box-shadow:0 0 0 1px #e5e5e5;background:white}.demo-pill{display:inline-flex;align-items:center;gap:6px;border-radius:999px;background:#fff0e4;color:#a64a0c;padding:7px 10px;font-size:10px;font-weight:850;letter-spacing:.5px}.demo-pill:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--orange)}.slide{--travel:calc(100% - 52px);height:58px;background:#25272b;border-radius:30px;padding:5px;position:relative;touch-action:pan-y;user-select:none;overflow:hidden;margin:18px 0 8px}.slide-label{position:absolute;inset:0;display:grid;place-items:center;color:#c5c6ca;font-size:13px;font-weight:750;pointer-events:none;transition:opacity .15s}.slide-fill{position:absolute;left:5px;top:5px;bottom:5px;width:48px;border-radius:24px;background:#fff;pointer-events:none;transition:background .2s}.slide-handle{position:absolute;top:5px;left:5px;width:48px;height:48px;border-radius:24px;background:#fff;color:#25272b;display:grid;place-items:center;font-size:24px;font-weight:800;box-shadow:0 2px 8px #0002;touch-action:none;z-index:2}.slide-handle:focus-visible{outline:3px solid #ffb080;outline-offset:2px}.slide.success{background:var(--green)}.slide.success .slide-fill{background:var(--green)}.slide-handle.done{background:var(--green);color:white}.hint{text-align:center;font-size:11px;color:#8b8d94}.success-panel{text-align:center;padding:24px 8px}.success-icon{width:76px;height:76px;border-radius:26px;background:#e6f8ee;color:var(--green);font-size:42px;display:grid;place-items:center;margin:10px auto 18px;animation:pop .4s cubic-bezier(.2,1.5,.5,1)}@keyframes pop{from{transform:scale(.5)}to{transform:scale(1)}}.dashboard{padding-bottom:100px}.welcome{font-size:27px;letter-spacing:-.9px;margin:5px 0}.streak{background:#fff1e7;border-radius:22px;padding:18px;display:flex;align-items:center;gap:14px;margin:22px 0}.streak-emoji{font-size:38px}.streak strong{font-size:16px}.streak p{font-size:12px;color:#8d6650;margin:4px 0 0;line-height:1.4}.section-head{display:flex;align-items:center;justify-content:space-between;margin:25px 0 13px}.section-head h2{font-size:17px;margin:0;letter-spacing:-.4px}.text-btn{border:0;background:none;color:var(--orange);font-size:12px;font-weight:800}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.cartoon-card{border:1px solid #f0f0f2;border-radius:22px;padding:15px;background:#fff;min-height:153px;box-shadow:0 6px 20px #1d202508;transition:transform .2s}.cartoon-card:active{transform:scale(.98)}.card-emoji{width:54px;height:54px;border-radius:18px;display:grid;place-items:center;font-size:30px;margin-bottom:13px}.peach{background:#fff0e6}.lavender{background:#f1edff}.mint{background:#e6f8ef}.yellow{background:#fff6d9}.cartoon-card h3{font-size:13px;margin:0 0 5px}.cartoon-card p{font-size:11px;color:var(--muted);line-height:1.4;margin:0}.wide-card{display:flex;align-items:center;gap:13px;border:1px solid var(--line);padding:14px;border-radius:18px;margin:10px 0;background:#fff}.wide-card .card-emoji{margin:0;flex-shrink:0}.wide-card h3{margin:0 0 4px;font-size:13px}.wide-card p{margin:0;color:var(--muted);font-size:11px;line-height:1.4}.arrow{margin-left:auto;color:#b3b4b9;font-size:20px}.bottom-nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(480px,100%);display:flex;justify-content:space-around;padding:11px 9px calc(11px + env(safe-area-inset-bottom));background:#ffffffed;backdrop-filter:blur(16px);border-top:1px solid #eee;z-index:5}.nav-item{border:0;background:none;color:#999ba2;display:grid;gap:4px;justify-items:center;font-size:10px;font-weight:700;min-width:54px}.nav-item span:first-child{font-size:21px}.nav-item.active{color:var(--orange)}.page-head{display:flex;align-items:center;gap:12px;margin:3px 0 25px}.back{border:1px solid var(--line);background:#fff;border-radius:13px;width:42px;height:42px;font-size:21px}.page-head h1{font-size:21px;margin:0}.routine-hero{background:linear-gradient(135deg,#fff0e7,#fffaf6);border-radius:23px;padding:20px;margin-bottom:20px}.routine-hero .big-emoji{font-size:52px}.routine-hero h2{margin:8px 0;font-size:21px}.routine-hero p{font-size:13px;color:#7b6a60;line-height:1.5}.exercise{display:flex;gap:12px;align-items:center;padding:15px 0;border-bottom:1px solid var(--line)}.num{width:32px;height:32px;border-radius:11px;background:#fff0e7;color:var(--orange);display:grid;place-items:center;font-size:12px;font-weight:850;flex-shrink:0}.exercise h3{font-size:13px;margin:0 0 5px}.exercise p{font-size:11px;color:var(--muted);margin:0;line-height:1.45}.tag{font-size:10px;font-weight:800;background:#f4f4f6;padding:6px 8px;border-radius:8px;margin-left:auto;white-space:nowrap}.notice{padding:13px 14px;background:#fff8e8;border:1px solid #f4e7c8;border-radius:15px;font-size:11px;line-height:1.55;color:#725c2a;margin:18px 0}.profile-box{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px;margin:20px 0}.profile-row{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid #f1f1f2;font-size:13px}.profile-row:last-child{border:0}.hidden{display:none!important}
+@media(min-width:600px){body{padding:20px 0}.app{border-radius:30px;min-height:calc(100dvh - 40px)}.screen{min-height:calc(100dvh - 40px)}.bottom-nav{bottom:20px;border-radius:0 0 30px 30px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="app">
+  <section class="screen active" id="login">
+    <div class="brand"><img src="https://plain-apac-prod-public.komododecks.com/202610/24/nfqR1AktV3JUPUrWNPOE/image.png" alt="PostureX logo" onerror="this.style.display='none'">Posture<span>X</span></div>
+    <div class="login-hero">
+      <div class="eyebrow">Your everyday wellness companion</div>
+      <div class="hero-art"><div class="sun"></div><span class="spark s1">✦</span><span class="person" aria-hidden="true">🧘🏻</span><span class="spark s2">✧</span></div>
+      <h1 class="title">Move well.<br>Feel better.</h1>
+      <p class="subtitle">Small, mindful habits for posture, mobility and rehabilitation support.</p>
+      <div class="mini-note">A friendly demo experience. Your care plan should be personalised with a qualified clinician.</div>
+    </div>
+    <div class="eyebrow">Welcome to PostureX</div><h2 style="font-size:23px;margin:8px 0">Let’s get you started</h2>
+    <p class="subtitle">Enter any demo phone number to explore the app.</p>
+    <div class="field"><label for="phone">Mobile number</label><input id="phone" inputmode="numeric" autocomplete="tel" maxlength="10" placeholder="Enter 10-digit number" aria-describedby="phoneHelp"></div>
+    <div id="phoneHelp" class="muted" style="font-size:11px;margin:-7px 0 15px">Demo login only — no OTP is sent.</div>
+    <button class="btn" id="loginBtn">Continue <span aria-hidden="true">→</span></button>
+    <p class="legal">By continuing, you acknowledge this is a demonstration app, not a medical diagnosis or a substitute for professional care.</p>
+  </section>
+
+  <section class="screen" id="subscription">
+    <div class="topline"><button class="back" onclick="showScreen('login')" aria-label="Go back">‹</button><div class="brand"><img src="https://plain-apac-prod-public.komododecks.com/202610/24/nfqR1AktV3JUPUrWNPOE/image.png" alt="">Posture<span>X</span></div><span style="width:42px"></span></div>
+    <div class="eyebrow">Your wellness membership</div><h1 class="title">Make space for<br>feeling better.</h1><p class="subtitle">Explore movement education, daily reminders and guided routines in one friendly place.</p>
+    <div class="plan-card"><div style="font-size:12px;font-weight:800;opacity:.9">POSTUREX PLUS · DEMO PLAN</div><div class="price">₹899 <small>/ plan</small></div><div style="font-size:12px;opacity:.9">Demo subscription price · duration not configured</div><div style="margin-top:18px;display:flex;gap:8px;align-items:center;font-size:12px;font-weight:750"><span>✦</span> Posture habits, movement guides & progress</div></div>
+    <div class="feature"><span class="check">✓</span><div><b>Posture & movement library</b><br><span class="muted">Simple education for daily routines.</span></div></div>
+    <div class="feature"><span class="check">✓</span><div><b>Antenatal & postnatal sections</b><br><span class="muted">General information with clinician-first guidance.</span></div></div>
+    <div class="feature"><span class="check">✓</span><div><b>Habit reminders & progress</b><br><span class="muted">Build consistency at your own pace.</span></div></div>
+    <button class="btn" id="choosePlan">Continue to payment · ₹899</button>
+    <p class="legal">This is a UI demo. No subscription is actually purchased and no payment credentials are collected.</p>
+  </section>
+
+  <section class="screen" id="payment">
+    <div class="page-head"><button class="back" onclick="showScreen('subscription')" aria-label="Go back">‹</button><div><h1>Complete your plan</h1><div class="muted" style="font-size:12px;margin-top:4px">PostureX Plus · ₹899</div></div></div>
+    <span class="demo-pill">DEMO PAYMENT ONLY</span>
+    <h2 style="font-size:20px;margin:18px 0 6px">Choose a payment method</h2><p class="subtitle">Select a simulated method to preview the checkout.</p>
+    <div class="payment-methods">
+      <button class="method active" data-method="gpay"><span class="method-icon">📱</span><span>GPay / UPI</span></button>
+      <button class="method" data-method="card"><span class="method-icon">💳</span><span>Card</span></button>
+    </div>
+    <div id="gpayPane">
+      <div class="qr-wrap"><div style="font-weight:850;font-size:14px">Scan demo QR</div><div class="muted" style="font-size:11px;margin-top:5px">Illustration only · not payable</div><canvas class="qr" id="qr" width="170" height="170" aria-label="Decorative fake QR code, not a payment QR"></canvas><div style="font-size:12px;font-weight:800">PostureX Demo Store</div><div style="font-size:12px;color:var(--muted);margin-top:4px">Amount: ₹899.00</div></div>
+    </div>
+    <div id="cardPane" class="profile-box hidden">
+      <div class="notice" style="margin-top:0">Demo card form. Do not enter real card details.</div>
+      <div class="field"><label for="cardName">Name on card</label><input id="cardName" placeholder="Demo User" autocomplete="off"></div>
+      <div class="field"><label for="cardNumber">Card number</label><input id="cardNumber" inputmode="numeric" maxlength="19" placeholder="0000 0000 0000 0000" autocomplete="off"></div>
+      <div class="grid2"><div class="field"><label for="expiry">Expiry</label><input id="expiry" placeholder="MM/YY" maxlength="5" autocomplete="off"></div><div class="field"><label for="cvv">CVV</label><input id="cvv" placeholder="•••" inputmode="numeric" maxlength="4" autocomplete="off"></div></div>
+    </div>
+    <div class="notice">🔒 Demo mode: sliding the control below only records a local demo state. It does not contact GPay, a bank, or a payment gateway.</div>
+    <div class="slide" id="slide" aria-label="Slide to simulate demo payment">
+      <div class="slide-label" id="slideLabel">Slide to pay ₹899</div><div class="slide-fill" id="slideFill"></div><button class="slide-handle" id="slideHandle" aria-label="Slide to simulate demo payment" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">›</button>
+    </div><div class="hint">Drag the arrow all the way to the right</div>
+    <button class="btn secondary" style="margin-top:20px" onclick="showScreen('subscription')">Cancel</button>
+  </section>
+
+  <section class="screen" id="paid">
+    <div class="topline"><div class="brand"><img src="https://plain-apac-prod-public.komododecks.com/202610/24/nfqR1AktV3JUPUrWNPOE/image.png" alt="">Posture<span>X</span></div><span class="demo-pill">DEMO</span></div>
+    <div class="success-panel"><div class="success-icon" aria-hidden="true">✓</div><div class="eyebrow">Demo flow complete</div><h1 class="title" style="font-size:28px">That’s a wrap!</h1><p class="subtitle">The demo checkout animation finished successfully. No money was transferred and no subscription was activated.</p><div class="profile-box" style="text-align:left"><div class="profile-row"><span class="muted">Demo reference</span><b id="reference">PX-DEMO-0001</b></div><div class="profile-row"><span class="muted">Amount shown</span><b>₹899.00</b></div><div class="profile-row"><span class="muted">Status</span><b style="color:var(--green)">Demo only</b></div></div><button class="btn" onclick="enterApp()">Explore PostureX <span aria-hidden="true">→</span></button><button class="btn secondary" style="margin-top:10px" onclick="showScreen('payment')">Replay demo payment</button></div>
+  </section>
+
+  <section class="screen dashboard" id="home">
+    <div class="topline"><div class="brand"><img src="https://plain-apac-prod-public.komododecks.com/202610/24/nfqR1AktV3JUPUrWNPOE/image.png" alt="">Posture<span>X</span></div><div class="avatar" id="avatar">PX</div></div>
+    <div class="eyebrow">A little care goes a long way</div><h1 class="welcome">Hey there 👋</h1><p class="subtitle">Ready to give your body a mindful moment?</p>
+    <div class="streak"><div class="streak-emoji">🌱</div><div><strong>Your next step starts small</strong><p>Try a comfortable movement break today. No streak pressure.</p></div></div>
+    <div class="section-head"><h2>Your wellness space</h2><button class="text-btn" onclick="showPage('routines')">See all</button></div>
+    <div class="grid2">
+      <button class="cartoon-card" onclick="showPage('routines')" style="text-align:left"><div class="card-emoji peach">🧍</div><h3>Posture habits</h3><p>Everyday setup & movement breaks</p></button>
+      <button class="cartoon-card" onclick="showPage('back')" style="text-align:left"><div class="card-emoji lavender">🌿</div><h3>Back & neck care</h3><p>Gentle movement education</p></button>
+      <button class="cartoon-card" onclick="showPage('antenatal')" style="text-align:left"><div class="card-emoji mint">🤰</div><h3>Antenatal care</h3><p>Pregnancy wellness information</p></button>
+      <button class="cartoon-card" onclick="showPage('postnatal')" style="text-align:left"><div class="card-emoji yellow">🫶</div><h3>Postnatal care</h3><p>Recovery education & support</p></button>
+    </div>
+    <div class="section-head"><h2>Quick wellness tip</h2><span style="font-size:20px">💡</span></div>
+    <div class="wide-card"><div class="card-emoji peach">🪑</div><div><h3>Make your setup work for you</h3><p>Change position regularly and keep your work comfortably within reach.</p></div></div>
+    <div class="notice">Medical note: stop any movement that causes pain, dizziness, bleeding, shortness of breath or other concerning symptoms. Seek advice from a qualified healthcare professional. Pregnancy and postpartum activity should be individually cleared.</div>
+  </section>
+
+  <section class="screen dashboard" id="routines">
+    <div class="page-head"><button class="back" onclick="showScreen('home')" aria-label="Back to home">‹</button><div><h1>Posture habits</h1><div class="muted" style="font-size:12px;margin-top:4px">Build a comfortable routine</div></div></div>
+    <div class="routine-hero"><div class="big-emoji">🧍‍♀️✨</div><h2>Little resets, often</h2><p>There is no single perfect posture. Vary your position, use comfortable support, and take breaks that work for you.</p></div>
+    <div class="section-head"><h2>Everyday ideas</h2></div>
+    <div class="exercise"><div class="num">01</div><div><h3>Screen-height check</h3><p>Position your screen so you can look ahead without repeatedly bending your neck.</p></div><span class="tag">1 min</span></div>
+    <div class="exercise"><div class="num">02</div><div><h3>Comfortable movement break</h3><p>Stand, walk, or gently change position if comfortable. Choose what feels right today.</p></div><span class="tag">2 min</span></div>
+    <div class="exercise"><div class="num">03</div><div><h3>Shoulder comfort check</h3><p>Let your shoulders rest naturally; avoid forcing them down or holding a rigid pose.</p></div><span class="tag">30 sec</span></div>
+    <div class="notice">These are general wellness suggestions, not a prescribed treatment plan. A clinician can tailor advice to your symptoms and needs.</div>
+    <button class="btn" onclick="markDone()">✓ Mark today’s wellness check</button><p id="routineMessage" class="muted" style="font-size:12px;text-align:center"></p>
+  </section>
+
+  <section class="screen dashboard" id="back">
+    <div class="page-head"><button class="back" onclick="showScreen('home')" aria-label="Back to home">‹</button><div><h1>Back & neck care</h1><div class="muted" style="font-size:12px;margin-top:4px">Comfort-first education</div></div></div>
+    <div class="routine-hero"><div class="big-emoji">🌿🧸</div><h2>Listen to your body</h2><p>Back and neck discomfort can have different causes. There is no one exercise that is right for everyone.</p></div>
+    <div class="wide-card"><div class="card-emoji peach">🪑</div><div><h3>Adjust your environment</h3><p>Try a comfortable chair, screen position and reachable work area.</p></div></div>
+    <div class="wide-card"><div class="card-emoji mint">🚶</div><div><h3>Choose comfortable movement</h3><p>Gentle everyday movement may be suitable for some people; do not push through pain.</p></div></div>
+    <div class="wide-card"><div class="card-emoji lavender">🩺</div><div><h3>Get individual guidance</h3><p>A physiotherapist or clinician can assess persistent or recurring symptoms.</p></div></div>
+    <div class="notice">Seek urgent medical help for severe or rapidly worsening symptoms, new weakness, significant numbness, or symptoms following a serious injury.</div>
+  </section>
+
+  <section class="screen dashboard" id="antenatal">
+    <div class="page-head"><button class="back" onclick="showScreen('home')" aria-label="Back to home">‹</button><div><h1>Antenatal wellness</h1><div class="muted" style="font-size:12px;margin-top:4px">During pregnancy</div></div></div>
+    <div class="routine-hero"><div class="big-emoji">🤰🌼</div><h2>Support for changing needs</h2><p>Pregnancy is individual. Discuss activity, pain, pelvic-floor care and any restrictions with your maternity team.</p></div>
+    <div class="exercise"><div class="num">01</div><div><h3>Comfort check-in</h3><p>Notice what positions feel comfortable and take breaks when needed.</p></div></div>
+    <div class="exercise"><div class="num">02</div><div><h3>Everyday support</h3><p>Use stable support when needed and avoid activities your clinician has advised against.</p></div></div>
+    <div class="exercise"><div class="num">03</div><div><h3>Ask your maternity team</h3><p>Get personalised guidance before starting a new exercise or rehabilitation routine.</p></div></div>
+    <div class="notice">This section is educational, not a pregnancy exercise prescription. Stop activity and contact your maternity team for concerning symptoms; seek urgent care for emergencies.</div>
+  </section>
+
+  <section class="screen dashboard" id="postnatal">
+    <div class="page-head"><button class="back" onclick="showScreen('home')" aria-label="Back to home">‹</button><div><h1>Postnatal recovery</h1><div class="muted" style="font-size:12px;margin-top:4px">After birth</div></div></div>
+    <div class="routine-hero"><div class="big-emoji">🫶🌷</div><h2>Recovery has its own pace</h2><p>Healing and readiness vary after birth. Your maternity team or pelvic-health physiotherapist can help you plan safe next steps.</p></div>
+    <div class="exercise"><div class="num">01</div><div><h3>Prioritise recovery</h3><p>Rest when possible, accept support and follow your discharge instructions.</p></div></div>
+    <div class="exercise"><div class="num">02</div><div><h3>Ask about pelvic health</h3><p>Discuss pelvic-floor symptoms, abdominal concerns, pain or leaking with a qualified clinician.</p></div></div>
+    <div class="exercise"><div class="num">03</div><div><h3>Return gradually</h3><p>Ask when and how to resume exercise based on your birth, healing and symptoms.</p></div></div>
+    <div class="notice">This is general information, not a personalised postnatal rehabilitation plan. Seek prompt care for heavy bleeding, chest pain, trouble breathing, severe headache, fever, or other urgent symptoms.</div>
+  </section>
+
+  <section class="screen dashboard" id="profile">
+    <div class="page-head"><div class="avatar">PX</div><div><h1>Your profile</h1><div class="muted" style="font-size:12px;margin-top:4px">Demo account settings</div></div></div>
+    <div class="profile-box"><div class="profile-row"><span class="muted">Mobile number</span><b id="profilePhone">—</b></div><div class="profile-row"><span class="muted">Plan</span><b>Demo preview</b></div><div class="profile-row"><span class="muted">Payment</span><b>Not activated</b></div><div class="profile-row"><span class="muted">Daily wellness check</span><b id="checkStatus">Not marked</b></div></div>
+    <div class="notice">Your demo details are stored only in this browser using localStorage. This is not suitable for storing real patient health information.</div>
+    <button class="btn secondary" onclick="logout()">Log out of demo</button>
+    <button class="text-btn" style="display:block;margin:22px auto" onclick="clearDemo()">Clear demo data</button>
+  </section>
+
+  <nav class="bottom-nav hidden" id="nav" aria-label="Main navigation">
+    <button class="nav-item active" data-page="home"><span>⌂</span><span>Home</span></button>
+    <button class="nav-item" data-page="routines"><span>☀</span><span>Posture</span></button>
+    <button class="nav-item" data-page="antenatal"><span>♡</span><span>Antenatal</span></button>
+    <button class="nav-item" data-page="postnatal"><span>✿</span><span>Postnatal</span></button>
+    <button class="nav-item" data-page="profile"><span>◉</span><span>Profile</span></button>
+  </nav>
+</div>
+<script>
+const $=s=>document.querySelector(s);
+const screens=[...document.querySelectorAll('.screen')];
+function showScreen(id){screens.forEach(s=>s.classList.toggle('active',s.id===id));$('#nav').classList.toggle('hidden',!['home','routines','back','antenatal','postnatal','profile'].includes(id));window.scrollTo({top:0,behavior:'smooth'});}
+function showPage(id){showScreen(id);document.querySelectorAll('.nav-item').forEach(b=>b.classList.toggle('active',b.dataset.page===id||(id==='back'&&b.dataset.page==='routines')));}
+function enterApp(){showPage('home');}
+$('#loginBtn').addEventListener('click',()=>{const p=$('#phone').value.replace(/\D/g,'');if(p.length<10){$('#phone').setAttribute('aria-invalid','true');$('#phone').focus();$('#phoneHelp').textContent='Please enter a 10-digit demo number.';$('#phoneHelp').style.color='#c33';return;}localStorage.setItem('posturex_demo_phone',p.slice(-10));$('#profilePhone').textContent='+91 '+p.slice(-10);$('#avatar').textContent=p.slice(-2);showScreen('subscription');});
+$('#phone').addEventListener('input',e=>{e.target.value=e.target.value.replace(/\D/g,'').slice(0,10);e.target.removeAttribute('aria-invalid');$('#phoneHelp').textContent='Demo login only — no OTP is sent.';$('#phoneHelp').style.color='';});
+$('#choosePlan').addEventListener('click',()=>{showScreen('payment');resetSlide();});
+document.querySelectorAll('.method').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.method').forEach(b=>b.classList.toggle('active',b===btn));const card=btn.dataset.method==='card';$('#cardPane').classList.toggle('hidden',!card);$('#gpayPane').classList.toggle('hidden',card);resetSlide();}));
+$('#cardNumber').addEventListener('input',e=>{e.target.value=e.target.value.replace(/\D/g,'').slice(0,16).replace(/(\d{4})(?=\d)/g,'$1 ');});
+$('#expiry').addEventListener('input',e=>{let v=e.target.value.replace(/\D/g,'').slice(0,4);if(v.length>2)v=v.slice(0,2)+'/'+v.slice(2);e.target.value=v;});
+$('#cvv').addEventListener('input',e=>e.target.value=e.target.value.replace(/\D/g,'').slice(0,4));
+// Decorative QR-like pattern only; intentionally not a valid UPI payment QR.
+function drawFakeQR(){const c=$('#qr'),ctx=c.getContext('2d'),n=29,cell=5.24;ctx.fillStyle='#fff';ctx.fillRect(0,0,170,170);let seed=739;const rand=()=>{seed=(seed*16807)%2147483647;return seed/2147483647};const finder=(x,y)=>{ctx.fillStyle='#161616';ctx.fillRect(x*cell,y*cell,7*cell,7*cell);ctx.fillStyle='#fff';ctx.fillRect((x+1)*cell,(y+1)*cell,5*cell,5*cell);ctx.fillStyle='#161616';ctx.fillRect((x+2)*cell,(y+2)*cell,3*cell,3*cell)};for(let y=0;y<n;y++)for(let x=0;x<n;x++){const inF=(x<8&&y<8)||(x>20&&y<8)||(x<8&&y>20);if(!inF&&rand()>.51){ctx.fillStyle='#171717';ctx.fillRect(x*cell,y*cell,cell*.92,cell*.92)}}finder(1,1);finder(21,1);finder(1,21);ctx.fillStyle='#fff';ctx.fillRect(63,63,44,44);ctx.fillStyle='#ff6b1a';ctx.fillRect(69,69,32,32);ctx.fillStyle='#fff';ctx.font='bold 17px sans-serif';ctx.textAlign='center';ctx.fillText('PX',85,90);}
+drawFakeQR();
+const slide=$('#slide'),handle=$('#slideHandle'),fill=$('#slideFill'),label=$('#slideLabel');let dragging=false,startX=0,origin=0,done=false;
+function maxTravel(){return Math.max(0,slide.clientWidth-58)}
+function setPos(x){const max=maxTravel(),v=Math.max(0,Math.min(max,x));handle.style.left=(5+v)+'px';fill.style.width=(48+v)+'px';handle.setAttribute('aria-valuenow',String(Math.round(max?v/max*100:0)));label.style.opacity=String(Math.max(0,1-v/Math.max(1,max*.55)));return v;}
+function resetSlide(){dragging=false;done=false;slide.classList.remove('success');handle.classList.remove('done');handle.textContent='›';handle.style.left='5px';fill.style.width='48px';label.style.opacity='1';label.textContent='Slide to pay ₹899';handle.disabled=false;handle.setAttribute('aria-valuenow','0');}
+function startDrag(e){if(done)return;dragging=true;startX=e.clientX;origin=parseFloat(handle.style.left||5)-5;handle.setPointerCapture?.(e.pointerId);e.preventDefault();}
+function moveDrag(e){if(!dragging)return;const p=setPos(origin+e.clientX-startX);if(p>=maxTravel()-2)finishDemo();}
+function endDrag(){if(!dragging)return;dragging=false;if(!done){handle.style.transition='left .22s ease';fill.style.transition='width .22s ease';setPos(0);setTimeout(()=>{handle.style.transition='';fill.style.transition='';},240);}}
+handle.addEventListener('pointerdown',startDrag);handle.addEventListener('pointermove',moveDrag);handle.addEventListener('pointerup',endDrag);handle.addEventListener('pointercancel',endDrag);
+handle.addEventListener('keydown',e=>{if(done)return;if(['ArrowRight','ArrowUp'].includes(e.key)){e.preventDefault();if(setPos(parseFloat(handle.style.left||5)-5+maxTravel()/10)>=maxTravel()-2)finishDemo();}else if(['ArrowLeft','ArrowDown','Home'].includes(e.key)){e.preventDefault();setPos(e.key==='Home'?0:parseFloat(handle.style.left||5)-5-maxTravel()/10)}else if(e.key==='End'){e.preventDefault();setPos(maxTravel());finishDemo();}});
+function tick(){try{const C=window.AudioContext||window.webkitAudioContext;if(!C)return;const c=new C(),o=c.createOscillator(),g=c.createGain();o.type='sine';o.frequency.setValueAtTime(660,c.currentTime);o.frequency.setValueAtTime(880,c.currentTime+.09);g.gain.setValueAtTime(.001,c.currentTime);g.gain.exponentialRampToValueAtTime(.12,c.currentTime+.02);g.gain.exponentialRampToValueAtTime(.001,c.currentTime+.24);o.connect(g);g.connect(c.destination);o.start();o.stop(c.currentTime+.25);o.onended=()=>c.close();}catch(e){}}
+function finishDemo(){if(done)return;done=true;dragging=false;handle.disabled=true;slide.classList.add('success');handle.classList.add('done');handle.textContent='✓';handle.style.left=(5+maxTravel())+'px';fill.style.width=(48+maxTravel())+'px';label.textContent='Demo complete';label.style.opacity='0';tick();$('#reference').textContent='PX-DEMO-'+Math.random().toString(36).slice(2,8).toUpperCase();setTimeout(()=>showScreen('paid'),420);}
+function markDone(){localStorage.setItem('posturex_demo_check',new Date().toISOString().slice(0,10));$('#routineMessage').textContent='Wellness check marked on this device ✓';$('#checkStatus').textContent='Marked today ✓';}
+document.querySelectorAll('.nav-item').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
+function logout(){showScreen('login');$('#nav').classList.add('hidden');}
+function clearDemo(){localStorage.removeItem('posturex_demo_phone');localStorage.removeItem('posturex_demo_check');$('#phone').value='';$('#profilePhone').textContent='—';$('#checkStatus').textContent='Not marked';showScreen('login');}
+if(localStorage.getItem('posturex_demo_phone')){const p=localStorage.getItem('posturex_demo_phone');$('#phone').value=p;$('#profilePhone').textContent='+91 '+p;$('#avatar').textContent=p.slice(-2);}
+if(localStorage.getItem('posturex_demo_check')===new Date().toISOString().slice(0,10)){$('#checkStatus').textContent='Marked today ✓';}
+window.addEventListener('resize',()=>{if(!done&&slide.offsetParent)setPos(0);});
+</script>
+</body>
+</html>
